@@ -73,8 +73,7 @@ a:hover {
 }
 
 @media all and (max-width: 500px) {
-  /* just need the % to override flex-basis */
   .flex-nav li {
-    flex: 100%;
+    flex-basis: 100%;
   }
 }
