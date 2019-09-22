@@ -84,6 +84,6 @@ a {
   border: 20px solid rgba(0, 0, 0, 0.3);
 }
 
-input[type:"search"] {
+input[type="search"] {
   flex-basis: 500px;
 }
