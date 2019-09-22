@@ -60,7 +60,7 @@ footer {
   font-weight: 100;
 }
 
-/* Flex Container */
+/* Flex Container, the ul is the container, not the .flex-nav */
 .flex-nav ul {
   border: 1px solid black;
   list-style: none;
@@ -97,6 +97,45 @@ footer {
 @media all and (max-width: 500px) {
   /* just need the % to override flex-basis */
   .flex-nav li {
-    flex: 100%;
+    flex-basis: 100%;
+  }
+
+  /* we want to reorder the items on small screens 
+  so we need to apply the order property to the items,
+  so we need a flex container*/
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* flex items */
+  /* reorder the items */
+  .flex-nav {
+    order: -3;
+  }
+
+  .top {
+    order: -1;
+  }
+
+  .details {
+    order: -1;
+  }
+
+  .signup {
+    order: -1;
+  }
+
+  /* we want to show our hamburger nav*/
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+  .flex-nav ul.open {
+    display: flex;
   }
 }
