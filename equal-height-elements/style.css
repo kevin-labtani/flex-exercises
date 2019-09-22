@@ -37,4 +37,12 @@ a {
 /* Flexbox Starts Here: */
 .elements {
   display: flex;
+  flex-wrap: wrap;
+  /* what to do with the extra space on the last row  */
+  justify-content: center;
+}
+
+/* we want to make equal height columns */
+.item {
+  flex: 0 1 calc(33.33% - 20px); /*remove margins with -20px*/
 }
